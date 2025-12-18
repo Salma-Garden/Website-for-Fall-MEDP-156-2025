@@ -1,102 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-  nav {
-    margin: 20px 0;
-  }
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown button {
-    background-color: #333;
-    color: white;
-    padding: 10px 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-
-  .dropdown-content {
-    position: absolute;
-    background-color: #f4f4f4;
-    min-width: 160px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 10px 14px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-
-  .dropdown:hover .dropdown-content {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .dropdown:hover button {
-    background-color: #555;
-  }
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Salma's Portfolio Website for MEDP150">
   <title>Salma's Portfolio</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Salma's Portfolio Website for MEDP150" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #222;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+
+    nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    nav a, .dropdown button {
+      margin: 0 5px;
+      border-radius: 5px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a {
+      padding: 10px 16px;
+      background-color: #eee;
+      color: #333;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      transform: translateY(-2px);
+    }
+
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .dropdown:hover button {
+      background-color: #555;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      min-width: 160px;
+      border-radius: 5px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 100;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 14px;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+      transform: translateX(5px);
+    }
+
+    .dropdown:hover .dropdown-content {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Salma's Portfolio</h1>
-  
-  <p>
-    Hello! I am Salma and I don't describe myself as an artist but someone who simply loves art in many forms. 
-    From the art of storytelling in the words of a novel to all the work that goes into a video game. 
-    Most of what I make comes from curiosity and the desire to experiment with different materials, so I am self-teaching myself how to draw at the moment with different books. I practice both digital art and traditional with pen and paper, I specifically use pen so I don't try to be  perfectionest, spending more time correcting tha actually drawing. Creating for me is a form of homage to things and people that I love. 
-    The first name that comes to mind as one of my greatest inspirations is Ken Sugimori, the original character designer for Pokémon, as it is one of the franchises that has affected me the most in my life.
-  </p> 
-    
-  <p>
-    If I see a chance to learn something new I will take it, and I am always open to learning new things. You never knew when something you learn will come in handy later on. So I hope I can stay disciplined and keep learning new things.
-  </p>
+  <div class="container">
+    <header>
+      <h1>Salma's Portfolio</h1>
+    </header>
 
-  <img src="images/super.JPG" width="400" alt="Portfolio Image">
+    <p>
+      Hello! I am Salma and I don't describe myself as an artist but someone who simply loves art in many forms. 
+      From the art of storytelling in the words of a novel to all the work that goes into a video game. 
+      Most of what I make comes from curiosity and the desire to experiment with different materials, so I am self-teaching myself how to draw at the moment with different books. I practice both digital art and traditional with pen and paper, I specifically use pen so I don't try to be perfectionist, spending more time correcting than actually drawing. Creating for me is a form of homage to things and people that I love. 
+      The first name that comes to mind as one of my greatest inspirations is Ken Sugimori, the original character designer for Pokémon, as it is one of the franchises that has affected me the most in my life.
+    </p> 
 
-  <br><br>
+    <p>
+      If I see a chance to learn something new I will take it, and I am always open to learning new things. You never knew when something you learn will come in handy later on. So I hope I can stay disciplined and keep learning new things.
+    </p>
 
-<nav>
-  <div class="dropdown">
-    <button>Homework</button>
-    <div class="dropdown-content">
-      <a href="hw1.html">HW 01</a>
-      <a href="hw2.html">HW 02</a>
-      <a href="hw3.html">HW 03</a>
-      <a href="hw4.html">HW 04</a>
-      <a href="hw5.html">HW 05</a>
-      <a href="hw6.html">HW 06</a>
-      <a href="hw7.html">HW 07</a>
-      <a href="hw8.html">HW 08</a>
-      <a href="hw9.html">HW 09</a>
-      <a href="hw10.html">HW 10</a>
-    </div>
+    <img src="images/super.JPG" alt="Portfolio Image">
+
+    <nav>
+      <div class="dropdown">
+        <button>Homework</button>
+        <div class="dropdown-content">
+          <a href="hw1.html">HW 01</a>
+          <a href="hw2.html">HW 02</a>
+          <a href="hw3.html">HW 03</a>
+          <a href="hw4.html">HW 04</a>
+          <a href="hw5.html">HW 05</a>
+          <a href="hw6.html">HW 06</a>
+          <a href="hw7.html">HW 07</a>
+          <a href="hw8.html">HW 08</a>
+          <a href="hw9.html">HW 09</a>
+          <a href="hw10.html">HW 10</a>
+        </div>
+      </div>
+
+      <a href="reflections.html">Readings</a>
+    </nav>
+
+    <footer>
+      © 2025 Salma's Portfolio
+    </footer>
   </div>
-
-  <a href="reflections.html" style="margin-left:20px;">Readings</a>
-</nav>
-
 </body>
 </html>
