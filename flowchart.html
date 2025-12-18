@@ -11,16 +11,50 @@
       font-family: "Georgia", serif;
       padding: 2rem;
     }
+
     h1 {
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 2rem;
     }
-    pre {
-      font-size: 1.1rem;
-      white-space: pre-wrap;
-      line-height: 1.5;
+
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-left: 1rem;
     }
+
+    .node {
+      border-left: 2px solid #66ccff;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .node::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 0;
+      bottom: 0;
+      border-left: 2px solid #66ccff;
+    }
+
+    .node > .title {
+      font-weight: bold;
+      color: #66ccff;
+      margin-bottom: 0.3rem;
+    }
+
+    .children {
+      margin-left: 1.5rem;
+      border-left: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
     a {
       display: inline-block;
       margin-top: 2rem;
@@ -34,40 +68,61 @@
 <body>
   <h1>Interactive Story Flowchart</h1>
 
-  <pre>
-index.html (Synopsis)
-|
-+-- exterior.html (Front of House)
-|   |
-|   +-- front-hall.html
-|   |    |
-|   |    +-- living-room.html
-|   |    |    |
-|   |    |    +-- hidden-room.html
-|   |    |    |     |
-|   |    |    |     +-- ending-caretaker.html
-|   |    |    |     +-- kitchen.html
-|   |    |    |
-|   |    |    +-- kitchen.html
-|   |    |
-|   |    +-- upstairs-hall.html
-|   |          |
-|   |          +-- childs-bedroom.html
-|   |          |     +-- ending-caretaker.html
-|   |          |     +-- ending-house.html
-|   |          |
-|   |          +-- hidden-room.html
-|   |
-|   +-- backyard.html
-|        |
-|        +-- living-room.html
-|        +-- basement.html
-|              |
-|              +-- ending-house.html
-|              +-- kitchen.html
-|
-+-- ending-empty-lot.html (Accessible from kitchen)
-  </pre>
+  <div class="flowchart">
+    <div class="node">
+      <div class="title">index.html (Synopsis)</div>
+      <div class="children">
+        <div class="node">
+          <div class="title">exterior.html (Front of House)</div>
+          <div class="children">
+            <div class="node">
+              <div class="title">front-hall.html</div>
+              <div class="children">
+                <div class="node">
+                  <div class="title">living-room.html</div>
+                  <div class="children">
+                    <div class="node">hidden-room.html
+                      <div class="children">
+                        <div class="node">ending-caretaker.html</div>
+                        <div class="node">kitchen.html</div>
+                      </div>
+                    </div>
+                    <div class="node">kitchen.html</div>
+                  </div>
+                </div>
+                <div class="node">
+                  <div class="title">upstairs-hall.html</div>
+                  <div class="children">
+                    <div class="node">childs-bedroom.html
+                      <div class="children">
+                        <div class="node">ending-caretaker.html</div>
+                        <div class="node">ending-house.html</div>
+                      </div>
+                    </div>
+                    <div class="node">hidden-room.html</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="node">
+              <div class="title">backyard.html</div>
+              <div class="children">
+                <div class="node">living-room.html</div>
+                <div class="node">
+                  basement.html
+                  <div class="children">
+                    <div class="node">ending-house.html</div>
+                    <div class="node">kitchen.html</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="node">ending-empty-lot.html (Accessible from kitchen)</div>
+      </div>
+    </div>
+  </div>
 
   <a href="index.html">Back to Home</a>
 </body>
