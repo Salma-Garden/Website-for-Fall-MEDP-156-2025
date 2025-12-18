@@ -6,11 +6,11 @@
   <meta name="description" content="Salma's Portfolio Website for MEDP150">
   <title>Salma's Portfolio</title>
 
-
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-
+    /* Global Styles */
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -21,7 +21,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
     }
@@ -47,83 +47,43 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-
-    nav {
-      text-align: center;
-      margin: 30px 0;
+    /* Cards Container */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
     }
 
-    nav a, .dropdown button {
-      margin: 0 5px;
-      border-radius: 5px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    nav a {
-      padding: 10px 16px;
-      background-color: #eee;
-      color: #333;
-    }
-
-    nav a:hover {
-      background-color: #ddd;
-      transform: translateY(-2px);
-    }
-
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown button {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .dropdown:hover button {
-      background-color: #555;
-    }
-
-    .dropdown-content {
-      position: absolute;
-      top: 100%;
-      left: 0;
+    .card {
       background-color: #fff;
-      min-width: 160px;
-      border-radius: 5px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      opacity: 0;
-      transform: translateY(-10px);
-      pointer-events: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      z-index: 100;
-    }
-
-    .dropdown-content a {
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
       color: #333;
-      padding: 10px 14px;
-      display: block;
     }
 
-    .dropdown-content a:hover {
-      background-color: #f0f0f0;
-      transform: translateX(5px);
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    .dropdown:hover .dropdown-content {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
+    .card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+      color: #222;
     }
 
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -153,25 +113,53 @@
 
     <img src="images/super.JPG" alt="Portfolio Image">
 
-    <nav>
-      <div class="dropdown">
-        <button>Homework</button>
-        <div class="dropdown-content">
-          <a href="hw1.html">HW 01</a>
-          <a href="hw2.html">HW 02</a>
-          <a href="hw3.html">HW 03</a>
-          <a href="hw4.html">HW 04</a>
-          <a href="hw5.html">HW 05</a>
-          <a href="hw6.html">HW 06</a>
-          <a href="hw7.html">HW 07</a>
-          <a href="hw8.html">HW 08</a>
-          <a href="hw9.html">HW 09</a>
-          <a href="hw10.html">HW 10</a>
-        </div>
-      </div>
-
-      <a href="reflections.html">Readings</a>
-    </nav>
+    <!-- Projects / Homework Cards -->
+    <div class="cards-container">
+      <a href="hw1.html" class="card">
+        <h3>HW 01</h3>
+        <p>Introduction to HTML/CSS</p>
+      </a>
+      <a href="hw2.html" class="card">
+        <h3>HW 02</h3>
+        <p>Basic JavaScript Concepts</p>
+      </a>
+      <a href="hw3.html" class="card">
+        <h3>HW 03</h3>
+        <p>Responsive Layouts</p>
+      </a>
+      <a href="hw4.html" class="card">
+        <h3>HW 04</h3>
+        <p>Forms and Input Validation</p>
+      </a>
+      <a href="hw5.html" class="card">
+        <h3>HW 05</h3>
+        <p>CSS Flexbox Project</p>
+      </a>
+      <a href="hw6.html" class="card">
+        <h3>HW 06</h3>
+        <p>JavaScript DOM Manipulation</p>
+      </a>
+      <a href="hw7.html" class="card">
+        <h3>HW 07</h3>
+        <p>Interactive Elements</p>
+      </a>
+      <a href="hw8.html" class="card">
+        <h3>HW 08</h3>
+        <p>Animation & Transitions</p>
+      </a>
+      <a href="hw9.html" class="card">
+        <h3>HW 09</h3>
+        <p>Portfolio Mini-Project</p>
+      </a>
+      <a href="hw10.html" class="card">
+        <h3>HW 10</h3>
+        <p>Final Project Showcase</p>
+      </a>
+      <a href="reflections.html" class="card">
+        <h3>Readings</h3>
+        <p>Essays and Reflections</p>
+      </a>
+    </div>
 
     <footer>
       © 2025 Salma's Portfolio
