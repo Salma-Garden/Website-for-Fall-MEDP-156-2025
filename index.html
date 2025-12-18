@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+  nav {
+    margin: 20px 0;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown button {
+    background-color: #333;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #f4f4f4;
+    min-width: 160px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .dropdown:hover button {
+    background-color: #555;
+  }
+</style>
+
   <title>Salma's Portfolio</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +91,6 @@
       <a href="hw7.html">HW 07</a>
       <a href="hw8.html">HW 08</a>
       <a href="hw9.html">HW 09</a>
-      <a href="hw10.html">HW 10</a>
     </div>
   </div>
 
